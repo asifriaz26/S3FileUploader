@@ -1,11 +1,11 @@
 {
-    "name": "asif/s3fileupload",
-    "description": "this package is to upload file on S3 for multiple systems",
+    "name": "sudocoder/s3fileuploader",
+    "description": "this package is to upload file and copy file from one bucket to another on S3 by just providing bucket detail and file name of S3 for multiple systems. Also check the existance of file on S3 and download the file from S3",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Asif\\S3\\": "src/"
+            "SudoCoder\\S3\\": "src/"
         }
     },
     "minimum-stability": "dev",
@@ -15,10 +15,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Asif\\S3\\S3UploadFileServiceProvider"
+                "SudoCoder\\S3\\S3UploadFileServiceProvider"
             ],
             "aliases": {
-                "S3FileUploader": "Asif\\S3\\S3UploadFileFacade"
+                "S3FileUploader": "SudoCoder\\S3\\S3UploadFileFacade"
             }
         }
     }    

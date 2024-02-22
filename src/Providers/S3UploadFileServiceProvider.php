@@ -1,10 +1,10 @@
 <?php
 
-namespace Asif\S3;
+namespace SudoCoder\S3;
 
 use Illuminate\Support\ServiceProvider;
-use Asif\S3\S3UploadFileService;
-use Asif\S3\S3FileUploader as S3FileUploaderFacadeAlias;
+use SudoCoder\S3\S3UploadFileService;
+use SudoCoder\S3\S3FileUploader as S3FileUploaderFacadeAlias;
 
 class S3UploadFileServiceProvider extends ServiceProvider
 {

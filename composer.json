@@ -1,0 +1,25 @@
+{
+    "name": "asif/s3fileupload",
+    "description": "this package is to upload file on S3 for multiple systems",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Asif\\S3\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "aws/aws-sdk-php": "^3.300"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Asif\\S3\\S3UploadFileServiceProvider"
+            ],
+            "aliases": {
+                "S3FileUploader": "Asif\\S3\\S3UploadFileFacade"
+            }
+        }
+    }    
+}

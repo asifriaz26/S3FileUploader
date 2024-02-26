@@ -31,15 +31,15 @@ class S3UploadFileService extends ServiceProvider{
     {
         $config = $this->getS3Config();
     
-        $client = S3Client::factory([
-            'credentials' => [
-                'key' => $config['aws_key'],
-                'secret' => $config['aws_secret_key'],
-            ],
-            'region' => $config['aws_default_region'],
+        $client = new S3Client([
             'version' => 'latest',
+            'region'  => $config['aws_default_region'],
+            'credentials' => [
+                'key'    => $config['aws_key'],
+                'secret' => $config['aws_secret_key'],
+            ]
         ]);
-    
+        
         return $client;
     }
   

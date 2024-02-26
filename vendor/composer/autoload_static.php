@@ -19,6 +19,7 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'SudoCoder\\S3\\' => 13,
         ),
         'P' => 
         array (
@@ -38,7 +39,6 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         'A' => 
         array (
             'Aws\\' => 4,
-            'Asif\\S3fileupload\\' => 18,
         ),
     );
 
@@ -47,10 +47,16 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
+        'SudoCoder\\S3\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+            1 => __DIR__ . '/../..' . '/src/Facades',
+            2 => __DIR__ . '/../..' . '/src/Services',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -75,10 +81,6 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         'Aws\\' => 
         array (
             0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
-        ),
-        'Asif\\S3fileupload\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

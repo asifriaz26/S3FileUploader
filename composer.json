@@ -1,11 +1,15 @@
 {
     "name": "sudocoder/s3fileuploader",
-    "description": "this package is to upload file and copy file from one bucket to another on S3 by just providing bucket detail and file name of S3 for multiple systems. Also check the existance of file on S3 and download the file from S3",
+    "description": "This package makes it easy to handle files on Amazon S3 for multiple systems. You can upload, copy between buckets, check if a file exists, and download files – all by just providing bucket details and file names. Simple file management for smooth data handling.",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SudoCoder\\S3\\": "src/"
+            "SudoCoder\\S3\\": [
+                "src/",
+                "src/Facades/",
+                "src/Services/"
+            ]
         }
     },
     "minimum-stability": "beta",
@@ -18,7 +22,7 @@
                 "SudoCoder\\S3\\S3UploadFileServiceProvider"
             ],
             "aliases": {
-                "S3FileUploader": "SudoCoder\\S3\\S3UploadFileFacade"
+                "S3FileUploader": "SudoCoder\\S3\\S3FileUploader"
             }
         }
     }    

@@ -1,66 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel S3 File Management Package
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+This Laravel package simplifies file management on Amazon S3 for your application. It provides functionality for uploading, copying between buckets, checking file existence, and downloading files effortlessly.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Installation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Install the package using Composer:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
 
-## Learning Laravel
+composer require sudocoder/s3fileuploader
+```
+## Configuration
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Set the following environment variables in your Laravel project's .env file:**
+```
+AWS_ACCESS_KEY_ID= //Your AWS Access Key ID.
+AWS_SECRET_ACCESS_KEY=  //Your AWS Secret Access Key.
+AWS_DEFAULT_REGION= //The AWS region, e.g., us-east-1.
+AWS_UPLOAD_BUCKET= //Target bucket for file uploads.
+AWS_DESTINATION_BUCKET= //Destination bucket for file copying.
+AWS_SOURCE_BUCKET= //Source bucket for file operations.
+AWS_SOURCE_FOLDER= //Source folder for operations involving folders.
+AWS_DESTINATION_FOLDER= //Destination folder for copying files.
+AWS_UPLOAD_FILE_FOLDER= //Folder for uploading files.
+APP_UPLOAD_IMAGE_FOLDER= //Folder for application-specific file uploads.
+AWS_USE_PATH_STYLE_ENDPOINT=  //Set to true if using a path-style S3 endpoint, otherwise false.
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Usage
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##### Upload File
 
-## Laravel Sponsors
+*To upload a file to S3, use the following:*
+```
+use SudoCoder\S3\S3FileUploader;
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+// Specify the file path and destination bucket
 
-### Premium Partners
+S3FileUploader::upload('local/path/to/file.txt');
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+##### Copy File Between Buckets
 
-## Contributing
+*To copy a file from one bucket to another:*
+```
+use SudoCoder\S3\S3FileUploader;
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+// Specify the file name and source/destination buckets and folder if any in env file
 
-## Code of Conduct
+S3FileUploader::copyFile('file.txt');
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+##### Check File Existence
+*To check if a file exists on S3:*
+```
+use SudoCoder\S3\S3FileUploader;
 
-## Security Vulnerabilities
+// Specify the file name and the bucket
+if (S3FileUploader::fileExists('file.txt', 'AWS_SOURCE_BUCKET', 'AWS_SOURCE_BUCKET_FOLDER')) {
+    // File exists
+} else {
+    // File does not exist
+}
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+##### Download File
+*To download a file from S3:*
+```
+use SudoCoder\S3\S3FileUploader;
+
+
+// Specify the file name and the bucket
+S3FileUploader::download('file.txt', 'AWS_SOURCE_BUCKET', 'AWS_SOURCE_BUCKET_FOLDER');
+```
+
+## Contribution
+
+Feel free to contribute to this package by creating issues or submitting pull requests.
 
 ## License
+This package is open-source and available under the MIT License.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+

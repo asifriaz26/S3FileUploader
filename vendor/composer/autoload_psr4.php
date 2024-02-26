@@ -11,7 +11,7 @@ return array(
     'SudoCoder\\S3fileuploader\\Providers\\' => array($baseDir . '/src/Providers'),
     'SudoCoder\\S3fileuploader\\Fadaces\\' => array($baseDir . '/src/Facades'),
     'SudoCoder\\S3fileuploader\\' => array($baseDir . '/src'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src', $vendorDir . '/psr/http-factory/src'),
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
     'JmesPath\\' => array($vendorDir . '/mtdowling/jmespath.php/src'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),

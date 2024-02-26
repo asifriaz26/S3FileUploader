@@ -1,6 +1,6 @@
 <?php
 
-namespace SudoCoder\S3fileuploader\Facades;
+namespace sudocoder\s3fileuploader\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

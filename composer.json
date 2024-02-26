@@ -3,27 +3,25 @@
     "description": "This package makes it easy to handle files on Amazon S3 for multiple systems. You can upload, copy between buckets, check if a file exists, and download files – all by just providing bucket details and file names. Simple file management for smooth data handling.",
     "type": "library",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "SudoCoder\\S3fileuploader\\": "src/",
-            "SudoCoder\\S3fileuploader\\Providers\\": "src/Providers/",
-            "SudoCoder\\S3fileuploader\\Services\\": "src/Services/",
-            "SudoCoder\\S3fileuploader\\Fadaces\\": "src/Facades/"
-        }
-    },
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "aws/aws-sdk-php": "^3.300"
     },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
+    "autoload": {
+        "files": ["src/Facades/s3FileUpload.php"],
+        "psr-4": {
+            "sudocoder\\s3FileUploader\\": "src/"
         }
     },
-    "scripts": {
-        "post-autoload-dump": [
-            "@php ../artisan package:discover --ansi"
-        ]
-    }    
+    "extra": {
+        "laravel": {
+            "providers": [
+                "sudocoder\\s3fileuploader\\Providers\\S3UploadFileServiceProvider"
+            ],
+            "aliases": {
+                "S3FileUpload": "sudocoders3fileuploader\\Facades\\s3FileUpload"
+            }
+        }
+    }
 }

@@ -3,7 +3,7 @@
         'name' => 'sudocoder/s3fileuploader',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f2b5df97533e5997da1932d7f587eaffe500a400',
+        'reference' => '242b15059672029eb1236ce66a14f0ef90338442',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -121,7 +121,7 @@
         'sudocoder/s3fileuploader' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f2b5df97533e5997da1932d7f587eaffe500a400',
+            'reference' => '242b15059672029eb1236ce66a14f0ef90338442',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

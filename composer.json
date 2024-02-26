@@ -12,7 +12,7 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php ../artisan package:discover --ansi"
-        ],
+        ]
     },
     "autoload": {
         "files": ["src/Facades/S3FileUpload.php"],

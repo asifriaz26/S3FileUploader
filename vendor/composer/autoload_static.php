@@ -19,6 +19,9 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'SudoCoder\\S3fileuploader\\Services\\' => 34,
+            'SudoCoder\\S3fileuploader\\Providers\\' => 35,
+            'SudoCoder\\S3fileuploader\\Fadaces\\' => 33,
             'SudoCoder\\S3fileuploader\\' => 25,
         ),
         'P' => 
@@ -46,6 +49,18 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'SudoCoder\\S3fileuploader\\Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Services',
+        ),
+        'SudoCoder\\S3fileuploader\\Providers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Providers',
+        ),
+        'SudoCoder\\S3fileuploader\\Fadaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Facades',
         ),
         'SudoCoder\\S3fileuploader\\' => 
         array (

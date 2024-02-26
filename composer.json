@@ -5,7 +5,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SudoCoder\\S3fileuploader\\": "src/"
+            "SudoCoder\\S3fileuploader\\": "src/",
+            "SudoCoder\\S3fileuploader\\Providers\\": "src/Providers/",
+            "SudoCoder\\S3fileuploader\\Services\\": "src/Services/",
+            "SudoCoder\\S3fileuploader\\Fadaces\\": "src/Facades/"
         }
     },
     "minimum-stability": "stable",

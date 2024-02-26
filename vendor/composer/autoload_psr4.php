@@ -7,6 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'SudoCoder\\S3fileuploader\\Services\\' => array($baseDir . '/src/Services'),
+    'SudoCoder\\S3fileuploader\\Providers\\' => array($baseDir . '/src/Providers'),
+    'SudoCoder\\S3fileuploader\\Fadaces\\' => array($baseDir . '/src/Facades'),
     'SudoCoder\\S3fileuploader\\' => array($baseDir . '/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),

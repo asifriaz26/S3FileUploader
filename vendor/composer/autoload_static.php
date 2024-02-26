@@ -50,8 +50,6 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         'SudoCoder\\S3\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/../..' . '/src/Facades',
-            2 => __DIR__ . '/../..' . '/src/Services',
         ),
         'Psr\\Http\\Message\\' => 
         array (

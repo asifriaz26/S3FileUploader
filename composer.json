@@ -5,11 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SudoCoder\\S3\\": [
-                "src/",
-                "src/Facades/",
-                "src/Services/"
-            ]
+            "SudoCoder\\S3\\": "src/"
         }
     },
     "minimum-stability": "beta",
@@ -19,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SudoCoder\\S3\\S3UploadFileServiceProvider"
+                "SudoCoder\\S3\\Providers\\S3UploadFileServiceProvider"
             ],
             "aliases": {
                 "S3FileUploader": "SudoCoder\\S3\\S3FileUploader"

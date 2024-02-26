@@ -17,5 +17,10 @@
         "laravel": {
             "dont-discover": []
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ../artisan package:discover --ansi"
+        ]
     }    
 }

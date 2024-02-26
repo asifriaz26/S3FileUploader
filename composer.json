@@ -9,18 +9,18 @@
         "aws/aws-sdk-php": "^3.300"
     },
     "autoload": {
-        "files": ["src/Facades/s3FileUpload.php"],
+        "files": ["src/Facades/S3FileUpload.php"],
         "psr-4": {
-            "sudocoder\\s3FileUploader\\": "src/"
+            "SudoCoder\\S3FileUploader\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "sudocoder\\s3fileuploader\\Providers\\S3UploadFileServiceProvider"
+                "SudoCoder\\S3FileUploader\\Providers\\S3UploadFileServiceProvider"
             ],
             "aliases": {
-                "S3FileUpload": "sudocoders3fileuploader\\Facades\\s3FileUpload"
+                "S3FileUpload": "SudoCoder\\S3FileUploader\\Facades\\s3FileUpload"
             }
         }
     }

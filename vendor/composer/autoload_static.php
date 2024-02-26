@@ -13,17 +13,14 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
-        'aeeeb72a91d4f38e82efec11cfd98975' => __DIR__ . '/../..' . '/src/Facades/s3FileUpload.php',
+        'b8b484e84a3ca49379ab2e71739f441e' => __DIR__ . '/../..' . '/src/Facades/S3FileUpload.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        's' => 
-        array (
-            'sudocoder\\s3FileUploader\\' => 25,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'SudoCoder\\S3FileUploader\\' => 25,
         ),
         'P' => 
         array (
@@ -47,13 +44,13 @@ class ComposerStaticInit6c8d6edeb28c92faba7f34613c824320
     );
 
     public static $prefixDirsPsr4 = array (
-        'sudocoder\\s3FileUploader\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'SudoCoder\\S3FileUploader\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (

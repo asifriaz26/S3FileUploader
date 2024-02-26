@@ -1,6 +1,6 @@
 <?php
 
-namespace sudocoder\s3fileuploader\Services;
+namespace SudoCoder\S3FileUploader\Services;
 
 use Aws\S3\S3Client;
 use Illuminate\Support\ServiceProvider;

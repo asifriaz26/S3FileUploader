@@ -3,8 +3,8 @@
 namespace SudoCoder\s3fileuploader\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use SudoCoder\S3\Services\S3UploadFileService;
-use SudoCoder\S3\Facades\S3FileUploader as S3FileUploaderFacadeAlias;
+use SudoCoder\s3fileuploader\Services\S3UploadFileService;
+use SudoCoder\s3fileuploader\Facades\S3FileUploader as S3FileUploaderFacadeAlias;
 
 class S3UploadFileServiceProvider extends ServiceProvider
 {

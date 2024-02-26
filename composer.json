@@ -8,18 +8,14 @@
             "SudoCoder\\s3fileuploader\\": "src/"
         }
     },
-    "minimum-stability": "beta",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "aws/aws-sdk-php": "^3.300"
     },
     "extra": {
         "laravel": {
-            "providers": [
-                "SudoCoder\\s3fileuploader\\Providers\\S3UploadFileServiceProvider"
-            ],
-            "aliases": {
-                "S3FileUploader": "SudoCoder\\S3\\S3FileUploader"
-            }
+            "dont-discover": []
         }
     }    
 }

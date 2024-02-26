@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SudoCoder\\S3\\Providers\\S3UploadFileServiceProvider"
+                "SudoCoder\\s3fileuploader\\Providers\\S3UploadFileServiceProvider"
             ],
             "aliases": {
                 "S3FileUploader": "SudoCoder\\S3\\S3FileUploader"

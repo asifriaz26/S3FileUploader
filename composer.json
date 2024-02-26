@@ -8,6 +8,12 @@
     "require": {
         "aws/aws-sdk-php": "^3.300"
     },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php ../artisan package:discover --ansi"
+        ],
+    },
     "autoload": {
         "files": ["src/Facades/S3FileUpload.php"],
         "psr-4": {
